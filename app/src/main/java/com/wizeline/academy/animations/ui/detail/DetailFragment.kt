@@ -4,13 +4,16 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.app.ActivityOptionsCompat
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.FragmentNavigatorExtras
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.wizeline.academy.animations.databinding.DetailFragmentBinding
 import com.wizeline.academy.animations.utils.loadImage
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
+import android.util.Pair as UtilPair
 
 @AndroidEntryPoint
 class DetailFragment : Fragment() {
@@ -37,7 +40,17 @@ class DetailFragment : Fragment() {
     private fun goToMoreDetails() {
         val directions =
             DetailFragmentDirections.toMoreDetailsFragment(args.imageId, viewModel.contentIndex)
-        findNavController().navigate(directions)
+
+        val extras = FragmentNavigatorExtras(
+            binding.ivImageDetail to "image_detail",
+            binding.tvTitle to "title_detail",
+            binding.tvSubtitle to "description_detail"
+        )
+
+        findNavController().navigate(
+            directions = directions,
+            navigatorExtras = extras
+        )
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

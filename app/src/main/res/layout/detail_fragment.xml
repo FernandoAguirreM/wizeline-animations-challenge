@@ -10,6 +10,7 @@
         android:layout_width="150dp"
         android:layout_height="150dp"
         android:layout_margin="20dp"
+        android:transitionName="image_detail"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:src="@drawable/sample_img" />
@@ -24,7 +25,8 @@
         android:textSize="16sp"
         app:layout_constraintStart_toEndOf="@id/ivImageDetail"
         app:layout_constraintTop_toTopOf="@id/ivImageDetail"
-        tools:text="Lorem Ipsum" />
+        tools:text="Lorem Ipsum"
+        android:transitionName="title_detail"/>
 
     <TextView
         android:id="@+id/tvSubtitle"
@@ -37,7 +39,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@id/tvTitle"
         app:layout_constraintTop_toBottomOf="@id/tvTitle"
-        tools:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nec eros molestie, malesuada diam et, tristique urna. Etiam venenatis in est eget congue." />
+        tools:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nec eros molestie, malesuada diam et, tristique urna. Etiam venenatis in est eget congue."
+        android:transitionName="description_detail"/>
 
     <Button
         android:id="@+id/btnMoreDetails"
