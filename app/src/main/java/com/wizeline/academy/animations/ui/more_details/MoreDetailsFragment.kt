@@ -39,15 +39,17 @@ class MoreDetailsFragment : Fragment() {
         _binding = MoreDetailsFragmentBinding.inflate(inflater, container, false)
         binding.ivImageDetailLarge.loadImage(args.imageId)
 
-        val title = binding.tvTitle;
-        val imageDetail = binding.ivImageDetailLarge;
-        val fullText = binding.tvFullTextContent;
+        binding.tvTitle.animate()
+            .translationX(10f)
+            .alpha(1f)
 
-        val sideRightSlideAnimation = AnimationUtils.loadAnimation(this.context, R.anim.side_right_slide_animation)
-        val sideleftSlideAnimation = AnimationUtils.loadAnimation(this.context, R.anim.side_left_slide_animation)
-        title.startAnimation(sideRightSlideAnimation)
-        imageDetail.startAnimation(sideleftSlideAnimation)
-        fullText.startAnimation(sideRightSlideAnimation)
+        binding.ivImageDetailLarge.animate()
+            .translationX(10f)
+            .alpha(1f)
+
+        binding.tvFullTextContent.animate()
+            .translationX(10f)
+            .alpha(1f)
 
         return binding.root
     }

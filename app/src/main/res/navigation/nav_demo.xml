@@ -13,7 +13,10 @@
         <action
             android:id="@+id/toMainFragment"
             app:destination="@id/mainFragment"
-            app:enterAnim="@anim/translation_animation_fragment" />
+            app:enterAnim="@anim/translation_animation_fragment"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@android:anim/fade_in"
+            app:popExitAnim="@android:anim/fade_out" />
     </fragment>
 
     <fragment
@@ -24,7 +27,10 @@
         <action
             android:id="@+id/toDetailFragment"
             app:destination="@id/detailFragment"
-            app:enterAnim="@anim/translation_animation_fragment" />
+            app:enterAnim="@anim/translation_animation_fragment"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@android:anim/fade_in"
+            app:popExitAnim="@android:anim/fade_out" />
     </fragment>
 
     <fragment
@@ -39,7 +45,10 @@
         <action
             android:id="@+id/toMoreDetailsFragment"
             app:destination="@id/moreDetailsFragment"
-            app:enterAnim="@anim/scale_animation_fragment" />
+            app:enterAnim="@anim/scale_animation_fragment"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@android:anim/fade_in"
+            app:popExitAnim="@android:anim/fade_out" />
     </fragment>
 
     <fragment

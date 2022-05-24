@@ -15,8 +15,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:startOffset="2000"
-        tools:text="Proin consectetur ante vel ex pulvinar, eu hendrerit enim tristique." />
+        tools:text="Proin consectetur ante vel ex pulvinar, eu hendrerit enim tristique."
+        android:transitionName="title_detail"/>
 
     <ImageView
         android:id="@+id/ivImageDetailLarge"
@@ -25,7 +25,8 @@
         android:layout_margin="20dp"
         android:scaleType="fitCenter"
         android:src="@drawable/sample_img"
-        app:layout_constraintTop_toBottomOf="@id/tvTitle" />
+        app:layout_constraintTop_toBottomOf="@id/tvTitle"
+        android:transitionName="image_detail"/>
 
     <TextView
         android:id="@+id/tvFullTextContent"
@@ -35,6 +36,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/ivImageDetailLarge"
+        android:transitionName="description_detail"
         tools:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam posuere velit
         vitae lorem scelerisque, et elementum elit lacinia. In blandit quam sit amet malesuada varius.
         Quisque posuere lacus ut ante imperdiet, et egestas ante pharetra. Vivamus a ipsum eros.
